@@ -2,17 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
-#root {
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+@font-face {
+  font-family: "Tinos";
+  src: url("/src/assets/Tinos/Tinos-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/src/assets/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -42,9 +52,15 @@ body,
 }
 
 body {
-  background-color: brown;
+  background-color: rgb(53, 46, 46);
 }
 .App {
-  /* display: flex; */
+  flex: 1;
+  display: flex;
   flex-direction: column;
+}
+
+.NavBar {
+  font-family: "SFMono", serif;
+  background-color: rgba(65, 48, 48, 0.651);
 }
